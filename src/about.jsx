@@ -1,10 +1,17 @@
 // About.jsx
 import React from "react";
 import { Navbare } from "./Navbare";
+import aboutimage from "../src/assets/images/aboutimage.jpg"
 
-const About = () => {
+export const About = () => {
   return (
     <div className="w-full flex flex-col gap-16 p-10 bg-gray-50">
+    <div className=" h-100 bg-cover bg-center"
+    style={{ backgroundImage: `url(${aboutimage})` }}
+    >
+    
+    </div>
+
     <div className="absolute top-2 left-4 right-4 fixed top-0 left-0  z-50">
           
             <Navbare />

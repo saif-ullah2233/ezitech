@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
+
+import "aos/dist/aos.css";
 import newboy from "../src/assets/images/newboy.jpg"; // Hero image ka path
 import { FaMobileAlt, FaEnvelope, FaMapMarkerAlt, FaYoutube, FaLinkedin, FaFacebook, FaInstagram, FaSearch } from "react-icons/fa";
 import { Navbare } from "./Navbare";
+import { Link } from "react-router-dom";
+import first from "../src/assets/images/first.jpg"
+import second from "../src/assets/images/second.jpg"
+import third from "../src/assets/images/third.jpg"
 export const Home = () => {
   const words = ["Marketing", "Programming", "Web Design", "Social Skills"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -72,11 +78,11 @@ export const Home = () => {
 
       {/* Center Text with Smooth Fade Animation */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight mt-10">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight mt-10 ">
           Learn the fundamentals from our experts in
           <br />
           <span
-            className={`text-blue-500 transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}
+            className={`text-blue-500 transition-opacity duration-3000 ${fade ? "opacity-100" : "opacity-10"}`}
           >
             {words[currentWordIndex]}
           </span>
@@ -122,38 +128,43 @@ export const Home = () => {
       <p className="mt-5">Through a Seamless Process</p>
     </h1>
   </div>
-  <div className="w-full flex justify-center gap-10 mt-10">
+  <div className="w-full flex justify-center gap-30 mt-20">
   {/* Step 1 */}
-  <div className="relative p-6 rounded-lg border border-gray-300">
+  <div className="relative p-6  w-100">
     {/* Step text top-left */}
-    <span className="absolute top-2 left-2 text-xs font-semibold text-gray-500">Step 1</span>
+    <span className="absolute top-2 left-2 text-xl font-semibold text-gray-500 mt-20 opacity-20">Step 1</span>
     {/* Number top-right */}
-    <span className="absolute top-2 right-2 text-4xl font-bold text-gray-800">1</span>
+    <span className="absolute top-2 right-2 text-9xl font-bold text-gray-800 opacity-20">1</span>
     
     {/* Main content */}
-    <p className="text-sm mt-6 text-gray-700 w-50">
-      Discover Tech<br/>
-      Explore internships across various technologies that align with your career goals. Start your journey by selecting a field that excites you.
+    <p className="text-xl mt-6 text-gray-700 w-80 ">
+      <h1 className="text-7xl text-blue-900 font-bold mt-30">Discover Tech</h1><br/>
+     <p className="text-xl"> Explore internships across various
+       technologies that align with your career goals. Start your journey by selecting a field that excites you.</p>
     </p>
   </div>
 
   {/* Step 2 */}
-  <div className="relative p-6 rounded-lg border border-gray-300 w-50">
-    <span className="absolute top-2 left-2 text-xs font-semibold text-gray-500">Step 2</span>
-    <span className="absolute top-2 right-2 text-4xl font-bold text-gray-800">2</span>
-    <p className="text-sm mt-6 text-gray-700">
-      <h1 className="text-5xl text-blue-900 font-bold">Evaluate Skill</h1><br/>
-      Our process includes an interview and a short evaluation task to assess your skills and readiness, helping us match you with the right opportunity.
+  <div className="relative p-6   w-100">
+    <span className="absolute top-2 left-2 text-xl font-semibold text-gray-500 mt-20 opacity-20">Step 2</span>
+    <span className="absolute top-2 right-2 text-9xl font-bold text-gray-800 opacity-20">2</span>
+    <p className="text-sm mt-6 text-gray-700 ">
+      <h1 className="text-7xl text-blue-900 font-bold mt-30">Evaluate Skill</h1><br/>
+     <p className="text-xl"> Our process includes an interview and a short evaluation task to assess your skills
+       and readiness, helping us match you with the right opportunity.</p>
     </p>
   </div>
 
   {/* Step 3 */}
-  <div className="relative p-6 rounded-lg border border-gray-300 w-50">
-    <span className="absolute top-2 left-2 text-xs font-semibold text-gray-500">Step 3</span>
-    <span className="absolute top-2 right-2 text-4xl font-bold text-gray-800">3</span>
-    <p className="text-xl mt-6 text-gray-700">
-      Track Record<br/>
-      Once selected, gain access to our iPortal to monitor your internship progress, track your achievements, and stay on top of your goals.
+  <div className="relative p-6  w-100 ">
+    <span className="absolute top-2 left-2 text-xl font-semibold text-gray-500 mt-20 opacity-20">Step 3</span>
+    <span className="absolute top-2 right-2 text-9xl font-bold text-gray-800 opacity-20">3</span>
+    <p className="text-3xl mt-6 text-gray-700">
+      <h1 className="text-7xl text-blue-900 font-bold mt-30">Track Record</h1><br/>
+   <p className="text-xl">
+       Once selected, gain access to our iPortal to monitor your internship progress,
+       track your achievements, and stay on top of your goals. 
+   </p>
     </p>
   </div>
 </div>
@@ -163,122 +174,264 @@ export const Home = () => {
   or{' '}
   <a href="#" className="text-blue-600 hover:underline text-xl">submit a ticket</a>.
 </div>
-
+<div>
+  
 <div className="w-full flex items-center gap-6 mt-10">
   {/* Left side - image placeholder */}
-  <div className="w-1/2 h-64 bg-gray-200 flex items-center justify-center">
-    {/* You can place your image here */}
-    <span className="text-gray-400">Image goes here</span>
+  <div className="w-1/2 h-300 w-auto  flex items-center justify-center">
+  
+    <div
+        className="w-100 h-150 bg-cover bg-center mb-150"
+        style={{ backgroundImage: `url(${first})` }}
+    >
+     <div
+        className="w-100 h-60 bg-cover bg-center ml-100 rounded-r-xl"
+        style={{ backgroundImage: `url(${third})` }}
+    ></div>
+     <div
+        className="w-100 h-150 bg-cover bg-center ml-70  rounded-xl"
+        style={{ backgroundImage: `url(${second})` }}
+    >
+   
+ </div>
+ 
+ </div>
+ 
   </div>
 
   {/* Right side - text */}
   <div className="w-1/2">
-    <h2 className="text-2xl font-bold text-gray-800 mb-4">
-      Your Heading Here
-    </h2>
-    <p className="text-gray-700 text-sm">
-      This is your text content. You can write any paragraph here that explains the image or provides information related to it. The text will stay on the right side while the image occupies the left.
+  
+   <div className="w-140 ml-150 mb-20">
+   <p className="w-40 h-10 bg-blue-300 opacity-40 rounded-full flex items-center justify-center">
+  <Link>What we do... ?</Link>
+</p>
+     <h1 className="text-6xl font-bold text-gray-800 mb-4">
+      Empowering Connections in the Digital World
+    </h1>
+    <p className="text-gray-700 text-2xl  text-bold">
+      We equip future professionals with the essential tools to thrive in both traditional and digital IT landscapes.
+With years of experience and countless successful placements, 
+Ezitech Institute has perfected a unique learning process that
+ goes beyond theory. We delve deep into practical skills
+ and real-world applications, helping students understand,
+  connect, and excel in the ever-evolving tech market.
     </p>
+    <div className=" text-white bg-blue-500 rounded-full w-50 h-fit p-5 mt-10"><button>MORE ABOUT US</button></div>
+   </div>
+  </div>
+</div>
+</div>
+
+<div className="w-full flex flex-col gap-10 p-10 ">
+
+  {/* Successful Internships & Countings */}
+  <div className="h-auto w-auto  flex gap-15 p-6 w-100">
+  
+  {/* Left Content */}
+  <div className=" p-6 rounded-lg text-center ">
+    <div className="w-auto">
+      <h2 className="text-5xl font-bold text-gray-800 mb-4 w-150">
+      Hundreds of Successful Internships & Countings
+    </h2>
+    </div>
+   <div className="w-180">
+     <p className="text-gray-700 text-3xl">
+      With a commitment to quality training and career advancement,
+       we've empowered students from diverse backgrounds. 
+      Through structured Internship, hands-on projects, and expert
+       mentorship, Ezitech Institute ensures that every student builds a solid foundation in IT.
+    </p>
+   </div>
+  </div>
+
+  {/* Right Stats */}
+  <div className="grid grid-cols-2 gap-6 text-center ml-24 w-200
+                text-white 
+                shadow-[0_10px_25px_rgba(59,130,246,0.5)]
+                rounded-xl p-6">
+    <div className=" p-6 rounded-lg">
+      <h3 className="text-4xl font-bold text-black">1000+</h3>
+      <p className="text-sm text-black mt-1">Active Students</p>
+    </div>
+
+    <div className=" p-6 rounded-lg ">
+      <h3 className="text-4xl font-bold text-black">95%</h3>
+      <p className="text-sm text-black mt-1">Positive Feedback</p>
+    </div>
+
+    <div className=" p-6 rounded-lg">
+      <h3 className="text-4xl font-bold text-black">50+</h3>
+      <p className="text-sm text-black mt-1">Industry MoUs</p>
+    </div>
+
+    <div className=" p-6 rounded-lg">
+      <h3 className="text-4xl font-bold text-black">1200+</h3>
+      <p className="text-sm text-black mt-1">Successful Graduates</p>
+    </div>
+  </div>
+
+</div>
+
+
+ {/* Courses / Programs */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-330 ml-50">
+
+  {/* App Development (LEFT - UP) */}
+  <div className="bg-indigo-100 p-6 rounded-lg h-120 w-100 translate-y-0 transition-transform duration-300 hover:scale-110">
+    <h3 className="text-5xl font-bold text-gray-800 mb-2 ">
+      App Development
+    </h3>
+    <p className="text-xl mt-15 text-gray-700">
+      We offer hands-on experience to develop cross-platform and native apps for iOS, Android, Windows, and Mac, using the latest tools.
+    </p>
+    <button className="mt-4 text-blue-600 hover:underline text-sm">
+      Explore Landing
+    </button>
+  </div>
+
+  {/* Graphics Design (CENTER - DOWN) */}
+  <div className="bg-pink-100 p-6 rounded-lg h-120 w-100 translate-y-8 transition-transform duration-300 hover:scale-110">
+    <h3 className="text-6xl font-bold text-gray-800 mb-2">
+      Graphics Design
+    </h3>
+    <p className="text-xl mt-10 text-gray-700">
+      Your journey to becoming a skilled graphic designer. We provide inspiration, tools, and support to help bring your vision to life.
+    </p>
+    <button className="mt-4 text-blue-600 hover:underline text-sm">
+      Explore Landing
+    </button>
+  </div>
+
+  {/* AI (RIGHT - UP) */}
+  <div className="bg-green-100 p-6 rounded-lg h-120 w-100 translate-y-0 transition-transform duration-300 hover:scale-110">
+    <h3 className="text-6xl font-bold text-gray-800 mb-2">
+      Artificial Intelligence
+    </h3>
+    <p className="text-xl text-gray-700 mt-10">
+      Gain practical experience in AI by building and deploying ML models. Learn data processing, model training & real-world AI applications.
+    </p>
+    <button className="mt-4 text-blue-600 hover:underline text-sm">
+      Explore Landing
+    </button>
+  </div>
+
+  {/* 2D/3D Architecture (LEFT - UP) */}
+  <div className="bg-yellow-100 p-6 rounded-lg h-120 w-100 translate-y-0 transition-transform duration-300 hover:scale-110">
+    <h3 className="text-6xl font-bold text-gray-800 mb-2">
+      2D/3D Architecture
+    </h3>
+    <p className="text-xl mt-10 text-gray-700">
+      Mentorship and tools to bring your game or architecture ideas to life with practical guidance and support.
+    </p>
+    <button className="mt-4 text-blue-600 hover:underline text-sm">
+      Explore Landing
+    </button>
+  </div>
+
+  {/* Web Development (CENTER - DOWN) */}
+  <div className="bg-purple-100 p-6 rounded-lg h-120 w-100 translate-y-8 transition-transform duration-300 hover:scale-110">
+    <h3 className="text-6xl font-bold text-gray-800 mb-2">
+      Web Development
+    </h3>
+    <p className="text-xl text-gray-700 mt-10">
+      Build exceptional web experiences using strategic and innovative design.
+    </p>
+    <button className="mt-4 text-blue-600 hover:underline text-sm">
+      Explore Landing
+    </button>
+  </div>
+
+  {/* Digital Marketing (RIGHT - UP) */}
+  <div className="bg-orange-100 p-6 rounded-lg h-120 w-100 translate-y-0 transition-transform duration-300 hover:scale-110">
+    <h3 className="text-6xl font-bold text-gray-800 mb-2">
+      Digital Marketing
+    </h3>
+    <p className="text-xl text-gray-700 mt-20">
+      Master digital marketing with tools, strategies, and guidance to drive impactful campaigns.
+    </p>
+    <button className="mt-4 text-blue-600 hover:underline text-sm">
+      Explore Landing
+    </button>
+  </div>
+
+</div>
+
+
+  {/* Alumni Section */}
+  {/* Alumni Section */}
+<div className=" p-6 rounded-lg text-center overflow-hidden w-330 ml-50">
+
+  <h3 className="text-6xl font-bold text-gray-800 mb-2">
+    Alumni 😍
+  </h3>
+
+  <p className="text-xl text-gray-700 mb-8">
+    Our interns consistently share positive experiences, highlighting the practical skills and professional growth they achieve with us.
+  </p>
+
+  {/* Marquee Wrapper */}
+  <div className="relative w-full overflow-hidden">
+    <div className="flex flex-nowrap gap-6 animate-marquee">
+
+      {/* ===== SET 1 ===== */}
+      {[
+        "Highly disciplined intern with strong React fundamentals. Delivered clean UI components on time.",
+        "Excellent problem-solving skills and great understanding of frontend workflows.",
+        "Professional attitude with strong JavaScript and Tailwind CSS expertise.",
+        "Quick learner who adapted to agile development environments smoothly.",
+        "Creative mindset with solid UI/UX sense and teamwork skills.",
+        "Reliable intern who understands real-world software house standards."
+      ].map((text, index) => (
+        <div
+          key={`a-${index}`}
+          className="bg-white w-100 h-auto p-4 rounded-lg shadow-md text-left shrink-0"
+        >
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 mb-3"></div>
+          <p className="text-sm text-gray-700">“{text}”</p>
+        </div>
+      ))}
+
+      {/* ===== SET 2 (DUPLICATE FOR CONTINUOUS FLOW) ===== */}
+      {[
+        "Highly disciplined intern with strong React fundamentals. Delivered clean UI components on time.",
+        "Excellent problem-solving skills and great understanding of frontend workflows.",
+        "Professional attitude with strong JavaScript and Tailwind CSS expertise.",
+        "Quick learner who adapted to agile development environments smoothly.",
+        "Creative mindset with solid UI/UX sense and teamwork skills.",
+        "Reliable intern who understands real-world software house standards."
+      ].map((text, index) => (
+        <div
+          key={`b-${index}`}
+          className="bg-white w-100 h-auto p-4 rounded-lg shadow-md text-left shrink-0"
+        >
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-pink-400 to-indigo-500 mb-3"></div>
+          <p className="text-sm text-gray-700">“{text}”</p>
+        </div>
+      ))}
+
+    </div>
   </div>
 </div>
 
-<div className="w-full flex flex-col gap-10 p-10">
+{/* Animation */}
+<style>
+{`
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-  {/* Successful Internships & Countings */}
-  <div className="bg-gradient-to-r from-blue-100 to-blue-200 p-6 rounded-lg text-center">
-    <h2 className="text-3xl font-bold text-gray-800 mb-4">
-      Hundreds of Successful Internships & Countings
-    </h2>
-    <p className="text-gray-700 text-sm">
-      With a commitment to quality training and career advancement, we've empowered students from diverse backgrounds. 
-      Through structured Internship, hands-on projects, and expert mentorship, Ezitech Institute ensures that every student builds a solid foundation in IT.
-    </p>
-  </div>
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+`}
+</style>
 
-  {/* Numbers / Stats */}
-  <div className="grid grid-cols-3 gap-6 text-center">
-    <div className="bg-green-100 p-6 rounded-lg">
-      <h3 className="text-4xl font-bold text-gray-800">1000+</h3>
-      <p className="text-sm text-gray-700 mt-1">Active Students</p>
-    </div>
-    <div className="bg-yellow-100 p-6 rounded-lg">
-      <h3 className="text-4xl font-bold text-gray-800">95%</h3>
-      <p className="text-sm text-gray-700 mt-1">Positive Feedback</p>
-    </div>
-    <div className="bg-pink-100 p-6 rounded-lg">
-      <h3 className="text-4xl font-bold text-gray-800">50+</h3>
-      <p className="text-sm text-gray-700 mt-1">Industry MoUs</p>
-    </div>
-    <div className="bg-purple-100 p-6 rounded-lg">
-      <h3 className="text-4xl font-bold text-gray-800">1200+</h3>
-      <p className="text-sm text-gray-700 mt-1">Successful Graduates</p>
-    </div>
-  </div>
-
-  {/* Courses / Programs */}
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-    {/* App Development */}
-    <div className="bg-indigo-100 p-6 rounded-lg">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">App Development</h3>
-      <p className="text-sm text-gray-700">
-        We offer hands-on experience to develop cross-platform and native apps for iOS, Android, Windows, and Mac, using the latest tools.
-      </p>
-      <button className="mt-4 text-blue-600 hover:underline text-sm">Explore Landing</button>
-    </div>
-
-    {/* Graphics Design */}
-    <div className="bg-pink-100 p-6 rounded-lg">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Graphics Design</h3>
-      <p className="text-sm text-gray-700">
-        Your journey to becoming a skilled graphic designer. We provide inspiration, tools, and support to help bring your vision to life.
-      </p>
-      <button className="mt-4 text-blue-600 hover:underline text-sm">Explore Landing</button>
-    </div>
-
-    {/* AI */}
-    <div className="bg-green-100 p-6 rounded-lg">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Artificial Intelligence</h3>
-      <p className="text-sm text-gray-700">
-        Gain practical experience in AI by building and deploying ML models. Learn data processing, model training & real-world AI applications.
-      </p>
-      <button className="mt-4 text-blue-600 hover:underline text-sm">Explore Landing</button>
-    </div>
-
-    {/* 2D/3D Architecture */}
-    <div className="bg-yellow-100 p-6 rounded-lg">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">2D/3D Architecture</h3>
-      <p className="text-sm text-gray-700">
-        Mentorship and tools to bring your game or architecture ideas to life with practical guidance and support.
-      </p>
-      <button className="mt-4 text-blue-600 hover:underline text-sm">Explore Landing</button>
-    </div>
-
-    {/* Web Development */}
-    <div className="bg-purple-100 p-6 rounded-lg">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Web Development</h3>
-      <p className="text-sm text-gray-700">
-        Build exceptional web experiences using strategic and innovative design.
-      </p>
-      <button className="mt-4 text-blue-600 hover:underline text-sm">Explore Landing</button>
-    </div>
-
-    {/* Digital Marketing */}
-    <div className="bg-orange-100 p-6 rounded-lg">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">Digital Marketing</h3>
-      <p className="text-sm text-gray-700">
-        Master digital marketing with tools, strategies, and guidance to drive impactful campaigns.
-      </p>
-      <button className="mt-4 text-blue-600 hover:underline text-sm">Explore Landing</button>
-    </div>
-  </div>
-
-  {/* Alumni Section */}
-  <div className="bg-gradient-to-r from-pink-100 to-purple-100 p-6 rounded-lg text-center">
-    <h3 className="text-2xl font-bold text-gray-800 mb-2">Alumni 😍</h3>
-    <p className="text-sm text-gray-700">
-      Our interns consistently share positive experiences, highlighting the practical skills and professional growth they achieve with us.
-    </p>
-  </div>
 
   {/* Support Links */}
   <div className="text-center mt-10 text-gray-700">
@@ -290,55 +443,113 @@ export const Home = () => {
     </p>
   </div>
 
-  {/* Social Links */}
-  <div className="flex flex-col md:flex-row justify-center gap-6 text-center mt-10">
-    <div className="p-4 bg-blue-200 rounded-lg w-60">Follow us on LinkedIn<br/>Latest news and updates</div>
-    <div className="p-4 bg-red-200 rounded-lg w-60">Follow us on YouTube<br/>Latest news and updates</div>
-    <div className="p-4 bg-blue-500 rounded-lg w-60 text-white">Follow us on Facebook<br/>Latest news and updates</div>
-    <div className="p-4 bg-green-400 rounded-lg w-60 text-white">WhatsApp Channel<br/>Join the Community</div>
+ <div className="flex flex-col md:flex-row justify-center gap-6 text-center mt-10">
+  <div className="p-4 bg-blue-200 rounded-lg w-60">
+    Follow us on LinkedIn<br />
+    Latest news and updates
   </div>
+
+  <div className="p-4 bg-red-200 rounded-lg w-60">
+    Follow us on YouTube<br />
+    Latest news and updates
+  </div>
+
+  <div className="p-4 bg-blue-500 rounded-lg w-60 text-white">
+    Follow us on Facebook<br />
+    Latest news and updates
+  </div>
+
+  <div className="p-4 bg-green-400 rounded-lg w-60 text-white">
+    WhatsApp Channel<br />
+    Join the Community
+  </div>
+</div>
+
+
 
   {/* Call to Action */}
-  <div className="bg-gradient-to-r from-indigo-100 to-indigo-200 p-10 rounded-lg text-center mt-10">
-    <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to get started?</h3>
-    <p className="text-gray-700 mb-4">
-      At Ezitech, we constantly push boundaries to deliver excellence. Our commitment to quality and innovation makes us your trusted partner for growth and success.
-    </p>
-    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Get started now</button>
-    <p className="text-gray-700 mt-6">
-      Office #304-B، Amna Plaza, Main Peshawar Rd, Rawalpindi, Punjab<br/>
-      (92) 337-7777860 | info@ezitech.org
-    </p>
+<div className="p-10 rounded-lg text-center mt-10 w-350 ml-30 h-80 shadow-lg shadow-blue-500/50">
+  <div className="flex gap-6">
+    {/* Left div */}
+    <div className="flex-1">
+      <h3 className="text-6xl font-bold text-gray-800 mb-4">Ready to get started?</h3>
+      <p className="text-gray-700 mb-4 text-xl">
+        At Ezitech, we constantly push boundaries to deliver excellence.
+        Our commitment to quality and innovation makes us your trusted partner for growth and success.
+      </p>
+    </div>
+
+    {/* Right div */}
+    <div className="flex-1 flex items-center justify-center">
+      <button className="bg-blue-600 text-white w-[280px] h-20 text-2xl font-bold rounded-full 
+                         shadow-lg shadow-blue-500/50 hover:bg-blue-700">
+        Get started now
+      </button>
+    </div>
   </div>
+</div>
+
 
   {/* Footer Links */}
-  <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm text-gray-700">
-    <span>Explore More</span>
-    <span>About Us</span>
-    <span>Partners</span>
-    <span>Portfolio</span>
-    <span>Careers</span>
-    <span>Blog</span>
-    <span>Internships</span>
-    <span>Strategy</span>
-    <span>eCommerce</span>
-    <span>Digital Marketing</span>
-    <span>Branding</span>
-    <span>Design</span>
-    <span>Updates</span>
-  </div>
+ 
+<div className="flex  justify-center gap-20 mt-10 text-gray-700 ">
+    <div className="p-6  rounded-lg w-[350px] text-gray-800">
+  <p className="mb-2 font-semibold text-2xl  ">Office:</p>
+  <p className="mb-4">#304-B, Amna Plaza, Main Peshawar Rd, Rawalpindi, Punjab</p>
 
-  {/* Newsletter */}
-  <div className="flex flex-col items-center mt-10 gap-4">
-    <p className="text-gray-700">Subscribe to our newsletter to get the latest news & updates.</p>
-    <div className="flex gap-2">
-      <input type="email" placeholder="Enter email address" className="p-2 border border-gray-400 rounded-l-lg"/>
-      <button className="bg-blue-600 text-white px-4 rounded-r-lg">GO</button>
+  <p className="mb-2 font-semibold">Phone:</p>
+  <p className="mb-4">(92) 337-7777860</p>
+
+  <p className="mb-2 font-semibold">Email:</p>
+  <p>info@ezitech.org</p>
+</div>
+  {/* Links section */}
+  <div className="flex  gap-60  w-auto">
+    <div className="flex flex-col  text-sm">
+
+
+      <span className="text-2xl text-gray-700 font-bold">Explore More</span>
+      <span className="text-xl mt-5">About Us</span>
+      <span className="text-xl">Partners</span>
+      <span className="text-xl">Portfolio</span>
+      <span className="text-xl">Careers</span>
+      <span className="text-xl">Blog</span>
+    </div>
+
+    <div className="flex flex-col gap-2 text-sm ">
+      <span className="text-2xl text-gray-700 font-bold">Internships</span>
+      <span className="text-xl">Strategy</span>
+      <span className="text-xl">eCommerce</span>
+      <span className="text-xl">Digital Marketing</span>
+      <span className="text-xl">Branding</span>
+      <span className="text-xl">Design</span>
     </div>
   </div>
 
+  {/* Newsletter section */}
+  <div className="flex flex-col items-start gap-4 text-sm">
+    <span className="font-bold text-2xl">Updates</span>
+    <p className="text-gray-700 max-w-xs text-xl">
+      Subscribe to our newsletter to get the latest news & updates.
+    </p>
+    <div className="flex">
+      <input
+        type="email"
+        placeholder="Enter email address"
+        className="p-2 border border-gray-400 rounded-l-lg w-50 h-15"
+      />
+      <button className="bg-blue-600 text-white px-4 rounded-r-lg hover:bg-blue-700">
+        GO
+      </button>
+    </div>
+  </div>
+</div>
+
+
+ </div>
+
   {/* Copyright */}
-  <div className="text-center text-gray-500 mt-10">
+  <div className="text-center text-gray-500 mt-5">
     © 2024 Ezitech Institute. All rights reserved | Design & Develop by Ezitech Solutions
   </div>
 
@@ -347,6 +558,6 @@ export const Home = () => {
 
 </div>
 
-    </div>
+  
   )
 };
