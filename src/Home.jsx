@@ -32,7 +32,7 @@ export const Home = () => {
         className="w-full h-full bg-cover bg-center"
         style={{ backgroundImage: `url(${newboy})` }}
       ></div>
-
+       
       {/* Top Bar */}
       <div className="absolute top-4 left-4 right-4 flex justify-between items-center px-4 py-2
       w-330 ml-50  bg-opacity-70 rounded-md z-50">
@@ -121,9 +121,84 @@ export const Home = () => {
 </div>
 
       </div>
-      <div className="w-full h-300 bg-white">
+ 
+<div className="w-full overflow-hidden mt-10">
+  
+  {/* INLINE STYLE — sirf isi div ke liye */}
+  <style>
+    {`
+      @keyframes marqueeRTL {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    `}
+  </style>
+
+  <div
+    className="flex items-center gap-20 whitespace-nowrap"
+    style={{
+      animation: "marqueeRTL 40s linear infinite",
+    }}
+  >
+    <div className="flex items-center gap-3 text-red-500 text-2xl font-semibold">
+      <i className="devicon-html5-plain text-5xl"></i> HTML5
+    </div>
+
+    <div className="flex items-center gap-3 text-blue-500 text-2xl font-semibold">
+      <i className="devicon-css3-plain text-5xl"></i> CSS3
+    </div>
+
+    <div className="flex items-center gap-3 text-yellow-400 text-2xl font-semibold">
+      <i className="devicon-javascript-plain text-5xl"></i> JavaScript
+    </div>
+
+    <div className="flex items-center gap-3 text-cyan-400 text-2xl font-semibold">
+      <i className="devicon-react-original text-5xl"></i> React
+    </div>
+
+    <div className="flex items-center gap-3 text-sky-400 text-2xl font-semibold">
+      <i className="devicon-tailwindcss-plain text-5xl"></i> Tailwind
+    </div>
+
+    <div className="flex items-center gap-3 text-green-500 text-2xl font-semibold">
+      <i className="devicon-nodejs-plain text-5xl"></i> Node.js
+    </div>
+
+    <div className="flex items-center gap-3 text-gray-700 text-2xl font-semibold">
+      <i className="devicon-express-original text-5xl"></i> Express
+    </div>
+
+    <div className="flex items-center gap-3 text-purple-600 text-2xl font-semibold">
+      <i className="devicon-php-plain text-5xl"></i> PHP
+    </div>
+
+    <div className="flex items-center gap-3 text-green-600 text-2xl font-semibold">
+      <i className="devicon-mongodb-plain text-5xl"></i> MongoDB
+    </div>
+
+    <div className="flex items-center gap-3 text-blue-600 text-2xl font-semibold">
+      <i className="devicon-mysql-plain text-5xl"></i> MySQL
+    </div>
+
+    {/* duplicates for smooth continuous flow */}
+    <div className="flex items-center gap-3 text-cyan-400 text-2xl font-semibold">
+      <i className="devicon-react-original text-5xl"></i> React
+    </div>
+
+    <div className="flex items-center gap-3 text-yellow-400 text-2xl font-semibold">
+      <i className="devicon-javascript-plain text-5xl"></i> JavaScript
+    </div>
+  </div>
+</div>
+
+
+      <div className="w-full h-300">
   <div className="mt-60 flex justify-center ">
-    <h1 className="text-blue-900 text-6xl font-semibold text-center w-300 text-bold ">
+    <h1 className="text-gray-700 font-serif text-6xl font-semibold text-center w-300 text-bold ">
       <p >Shaping Empowering Future IT Talent</p> 
       <p className="mt-5">Through a Seamless Process</p>
     </h1>
@@ -138,7 +213,7 @@ export const Home = () => {
     
     {/* Main content */}
     <p className="text-xl mt-6 text-gray-700 w-80 ">
-      <h1 className="text-7xl text-blue-900 font-bold mt-30">Discover Tech</h1><br/>
+      <h1 className="text-7xl text-gray-700 font-poppins mt-30">Discover Tech</h1><br/>
      <p className="text-xl"> Explore internships across various
        technologies that align with your career goals. Start your journey by selecting a field that excites you.</p>
     </p>
@@ -149,7 +224,7 @@ export const Home = () => {
     <span className="absolute top-2 left-2 text-xl font-semibold text-gray-500 mt-20 opacity-20">Step 2</span>
     <span className="absolute top-2 right-2 text-9xl font-bold text-gray-800 opacity-20">2</span>
     <p className="text-sm mt-6 text-gray-700 ">
-      <h1 className="text-7xl text-blue-900 font-bold mt-30">Evaluate Skill</h1><br/>
+      <h1 className="text-7xl text-blue-900 text-gray-700 font-poppins mt-30">Evaluate Skill</h1><br/>
      <p className="text-xl"> Our process includes an interview and a short evaluation task to assess your skills
        and readiness, helping us match you with the right opportunity.</p>
     </p>
@@ -160,7 +235,7 @@ export const Home = () => {
     <span className="absolute top-2 left-2 text-xl font-semibold text-gray-500 mt-20 opacity-20">Step 3</span>
     <span className="absolute top-2 right-2 text-9xl font-bold text-gray-800 opacity-20">3</span>
     <p className="text-3xl mt-6 text-gray-700">
-      <h1 className="text-7xl text-blue-900 font-bold mt-30">Track Record</h1><br/>
+      <h1 className="text-7xl text-blue-900 text-gray-700 font-poppins mt-30">Track Record</h1><br/>
    <p className="text-xl">
        Once selected, gain access to our iPortal to monitor your internship progress,
        track your achievements, and stay on top of your goals. 
@@ -360,77 +435,6 @@ Ezitech Institute has perfected a unique learning process that
 
   {/* Alumni Section */}
   {/* Alumni Section */}
-<div className=" p-6 rounded-lg text-center overflow-hidden w-330 ml-50">
-
-  <h3 className="text-6xl font-bold text-gray-800 mb-2">
-    Alumni 😍
-  </h3>
-
-  <p className="text-xl text-gray-700 mb-8">
-    Our interns consistently share positive experiences, highlighting the practical skills and professional growth they achieve with us.
-  </p>
-
-  {/* Marquee Wrapper */}
-  <div className="relative w-full overflow-hidden">
-    <div className="flex flex-nowrap gap-6 animate-marquee">
-
-      {/* ===== SET 1 ===== */}
-      {[
-        "Highly disciplined intern with strong React fundamentals. Delivered clean UI components on time.",
-        "Excellent problem-solving skills and great understanding of frontend workflows.",
-        "Professional attitude with strong JavaScript and Tailwind CSS expertise.",
-        "Quick learner who adapted to agile development environments smoothly.",
-        "Creative mindset with solid UI/UX sense and teamwork skills.",
-        "Reliable intern who understands real-world software house standards."
-      ].map((text, index) => (
-        <div
-          key={`a-${index}`}
-          className="bg-white w-100 h-auto p-4 rounded-lg shadow-md text-left shrink-0"
-        >
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 mb-3"></div>
-          <p className="text-sm text-gray-700">“{text}”</p>
-        </div>
-      ))}
-
-      {/* ===== SET 2 (DUPLICATE FOR CONTINUOUS FLOW) ===== */}
-      {[
-        "Highly disciplined intern with strong React fundamentals. Delivered clean UI components on time.",
-        "Excellent problem-solving skills and great understanding of frontend workflows.",
-        "Professional attitude with strong JavaScript and Tailwind CSS expertise.",
-        "Quick learner who adapted to agile development environments smoothly.",
-        "Creative mindset with solid UI/UX sense and teamwork skills.",
-        "Reliable intern who understands real-world software house standards."
-      ].map((text, index) => (
-        <div
-          key={`b-${index}`}
-          className="bg-white w-100 h-auto p-4 rounded-lg shadow-md text-left shrink-0"
-        >
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-pink-400 to-indigo-500 mb-3"></div>
-          <p className="text-sm text-gray-700">“{text}”</p>
-        </div>
-      ))}
-
-    </div>
-  </div>
-</div>
-
-{/* Animation */}
-<style>
-{`
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 20s linear infinite;
-}
-`}
-</style>
 
 
   {/* Support Links */}

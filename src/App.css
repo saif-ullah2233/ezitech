@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+@keyframes marqueeRTL {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marqueeRTL {
+  animation: marqueeRTL 5s linear infinite;
+}
